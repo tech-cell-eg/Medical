@@ -8,13 +8,13 @@ function initServices() {
 }
 
 function renderServices() {
-  fetch("../Services/Services.html")
+  fetch("Services/Services.html")
     .then((response) => response.text())
     .then((html) => {
       root.innerHTML = html;
 
       const script = document.createElement("script");
-      script.src = "../Services/Services.js";
+      script.src = "Services/Services.js";
       script.onload = () => {
         initAbout();
       };
