@@ -8,13 +8,13 @@ function initAppointment() {
 }
 
 function renderAppointment() {
-  fetch("Appointment/Appointment.html")
+  fetch("../Appointment/Appointment.html")
     .then((response) => response.text())
     .then((html) => {
       root.innerHTML = html;
 
       const script = document.createElement("script");
-      script.src = "Appointment/Appointment.js";
+      script.src = "../Appointment/Appointment.js";
       script.onload = () => {
         initAbout();
       };
