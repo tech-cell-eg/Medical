@@ -8,13 +8,13 @@ function initDoctors() {
 }
 
 function renderDoctors() {
-  fetch("Doctors/Doctors.html")
+  fetch("../Doctors/Doctors.html")
     .then((response) => response.text())
     .then((html) => {
       root.innerHTML = html;
 
       const script = document.createElement("script");
-      script.src = "Doctors/Doctors.js";
+      script.src = "../Doctors/Doctors.js";
       script.onload = () => {
         initAbout();
       };
