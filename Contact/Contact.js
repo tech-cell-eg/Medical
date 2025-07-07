@@ -8,13 +8,13 @@ function initContact() {
 }
 
 function renderContact() {
-  fetch("../Contact/Contact.html")
+  fetch("Contact/Contact.html")
     .then((response) => response.text())
     .then((html) => {
       root.innerHTML = html;
 
       const script = document.createElement("script");
-      script.src = "../Contact/Contact.js";
+      script.src = "Contact/Contact.js";
       script.onload = () => {
         initAbout();
       };
